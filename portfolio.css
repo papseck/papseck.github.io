@@ -1,3 +1,11 @@
+/* Appliquer l'effet de zoom et d'ombre au survol de toutes les images */
+img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'image */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Accentue l'ombre */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition fluide */
+}
+
+/* Ton CSS existant reste inchangé */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -35,7 +43,7 @@ footer {
     text-align: center;
     padding: 15px;
     position: relative;
-    bottom:auto;
+    bottom: auto;
     width: 100%;
 }
 section#CV {
@@ -43,11 +51,9 @@ section#CV {
 }
 
 p {
-    line-height: 1.5
-  }
- 
+    line-height: 1.5;
+}
 
-  
 .jauge-container {
     width: 50%;
     margin: 50px auto;
@@ -74,7 +80,7 @@ p {
     transform: translate(-50%, -50%);
     color: #000;
     font-weight: bold;
-  }
+}
 
 .passion-item img {
     max-width: 100%;
@@ -83,19 +89,30 @@ p {
     left: 0;
     visibility: visible; /* Rend le menu visible */
 }
+
 #photoProfil {
     width: 100px; 
     height: 100px;
     border-radius: 25%; 
     margin-left: 20px; 
-  }
-  .textecote {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.textecote {
     font-family: 'Arial', sans-serif;
-  } 
-  .profil-container {
+} 
+
+.profil-container {
     display: flex; 
     align-items: center;
-  }
+}
+
+h2 {
+    font-size: 3rem; /* Taille du texte plus grande */
+    font-family: 'Poppins', sans-serif; /* Une belle police moderne */
+    font-weight: bold; /* Texte en gras */
+    color: #333; /* Couleur sombre pour une meilleure lisibilité */
+}
 
 .contenu {
     display: flex;
@@ -103,6 +120,7 @@ p {
     margin-bottom: 20px; /* Espace entre les différentes sections */
     padding: 0 10%;
 }
+
 .texte {
     flex: 1; /* Prend tout l'espace disponible sauf celui de l'image */
     margin-right: 15px; /* Espace entre le texte et l'image */
@@ -112,4 +130,9 @@ p {
 .image-droite {
     width: 35%;
     height: auto;
+}
+
+strong {
+    font-weight: 900; /* Valeur maximale pour un texte très gras */
+    color: #000; /* Facultatif : Assurez une couleur foncée pour plus de contraste */
 }
